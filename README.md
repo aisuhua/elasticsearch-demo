@@ -28,7 +28,11 @@
 /my_index/my_type/_mappings
 ```
 
-[#18645](https://github.com/elastic/elasticsearch/issues/18645)
+### _count
+
+```
+/my_index/_count
+```
 
 ## Related
 
