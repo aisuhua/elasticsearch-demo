@@ -16,14 +16,16 @@ _cat
 _node
 
 ```sh
-_nodes
+/_nodes
 ```
 
 _settings
 
 ```sh
-_settings
+/_settings
+/my_index/_settings
 /my_index/_settings?include_defaults=true
+/my_index/my_type/_mappings
 ```
 
 
