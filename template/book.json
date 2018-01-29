@@ -1,0 +1,146 @@
+{
+  "114la_book": {
+    "settings": {
+      "index": {
+        "number_of_shards": "5",
+        "number_of_replicas": "0",
+        "analysis": {
+          "filter": {
+            "pinyin_simple_filter": {
+              "lowercase": "true",
+              "keep_original": "false",
+              "keep_first_letter": "true",
+              "keep_separate_first_letter": "false",
+              "type": "pinyin",
+              "limit_first_letter_length": "50",
+              "keep_full_pinyin": "false"
+            },
+            "pinyin_full_filter": {
+              "lowercase": "true",
+              "none_chinese_pinyin_tokenize": "true",
+              "keep_original": "false",
+              "keep_first_letter": "false",
+              "keep_separate_first_letter": "false",
+              "type": "pinyin",
+              "limit_first_letter_length": "50",
+              "keep_full_pinyin": "true"
+            },
+            "edge_ngram_filter": {
+              "type": "edge_ngram",
+              "min_gram": "1",
+              "max_gram": "50"
+            }
+          },
+          "analyzer": {
+            "ikSmartIndexAnalyzer": {
+              "type": "custom",
+              "tokenizer": "ik_smart"
+            },
+            "pinyiFullIndexAnalyzer": {
+              "filter": [
+                "pinyin_full_filter",
+                "lowercase"
+              ],
+              "tokenizer": "keyword"
+            },
+            "pinyiSimpleIndexAnalyzer": {
+              "filter": [
+                "pinyin_simple_filter",
+                "edge_ngram_filter",
+                "lowercase"
+              ],
+              "tokenizer": "keyword"
+            },
+            "pinyiFullSearchAnalyzer": {
+              "filter": [
+                "pinyin_full_filter",
+                "lowercase"
+              ],
+              "tokenizer": "keyword"
+            },
+            "ikIndexAnalyzer": {
+              "type": "custom",
+              "tokenizer": "ik_max_word"
+            },
+            "ikSearchAnalyzer": {
+              "type": "custom",
+              "tokenizer": "ik_max_word"
+            },
+            "ngramIndexAnalyzer": {
+              "filter": [
+                "edge_ngram_filter",
+                "lowercase"
+              ],
+              "type": "custom",
+              "tokenizer": "keyword"
+            },
+            "ngramSearchAnalyzer": {
+              "filter": [
+                "lowercase"
+              ],
+              "type": "custom",
+              "tokenizer": "keyword"
+            },
+            "ikSmartSearchAnalyzer": {
+              "type": "custom",
+              "tokenizer": "ik_smart"
+            },
+            "pinyiSimpleSearchAnalyzer": {
+              "filter": [
+                "pinyin_simple_filter",
+                "lowercase"
+              ],
+              "tokenizer": "keyword"
+            }
+          }
+        }
+      }
+    },
+    "mappings": {
+      "book": {
+        "include_in_all": false,
+        "_all": {
+          "analyzer": "ikSmartIndexAnalyzer"
+        },
+        "properties": {
+          "author_id": {
+            "type": "long"
+          },
+          "author_name": {
+            "type": "keyword",
+            "fields": {
+              "FPY": {
+                "type": "text",
+                "analyzer": "pinyiFullIndexAnalyzer"
+              },
+              "IKS": {
+                "type": "text",
+                "analyzer": "ikIndexAnalyzer"
+              },
+              "SPY": {
+                "type": "text",
+                "analyzer": "pinyiSimpleIndexAnalyzer"
+              },
+              "words": {
+                "type": "text",
+                "analyzer": "ngramIndexAnalyzer"
+              }
+            },
+            "include_in_all": true
+          },
+          "abs": {
+            "type": "text",
+            "analyzer": "ikSmartIndexAnalyzer",
+            "include_in_all": true
+          },
+          "create_time": {
+            "type": "long"
+          },
+          "update_time": {
+            "type": "long"
+          }
+        }
+      }
+    }
+  }
+}
