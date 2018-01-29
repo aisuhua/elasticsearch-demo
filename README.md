@@ -45,9 +45,9 @@
 ### _analyze
 
 ```
-/_analyze?analyzer=standard&text=中华人民共和国
-/_analyze?analyzer=english&text=中华人民共和国
-/my_index/_analyze?field=firstname&text=Black-cats
+/_analyze?analyzer=standard&text=suhua is a good boy
+/_analyze?analyzer=english&text=suhua is a good boy 
+/my_index/_analyze?field=name&text=Black-cats
 ```
 
 ### Plugins
