@@ -42,6 +42,14 @@
 /my_index/_count
 ```
 
+### _analyze
+
+```
+/_analyze?analyzer=standard&text=中华人民共和国
+/_analyze?analyzer=english&text=中华人民共和国
+/my_index/_analyze?field=firstname&text=Black-cats
+```
+
 ### Plugins
 
 - [elasticsearch-analysis-ik](https://github.com/medcl/elasticsearch-analysis-ik)
