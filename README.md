@@ -50,7 +50,7 @@
 /my_index/_analyze?field=name&text=Black-cats
 ```
 
-### Plugins
+## Plugins
 
 - [elasticsearch-analysis-ik](https://github.com/medcl/elasticsearch-analysis-ik)
 - [elasticsearch-analysis-pinyin](https://github.com/medcl/elasticsearch-analysis-pinyin)
