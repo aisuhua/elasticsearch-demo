@@ -60,3 +60,4 @@
 - [Index Aliases](https://www.elastic.co/guide/en/elasticsearch/reference/current/indices-aliases.html)
 - [cat APIs](https://www.elastic.co/guide/en/elasticsearch/reference/current/cat.html)
 - [Cluster APIs](https://www.elastic.co/guide/en/elasticsearch/reference/current/cluster.html)
+- [Tune for indexing speed](https://www.elastic.co/guide/en/elasticsearch/reference/6.1/tune-for-indexing-speed.html)
