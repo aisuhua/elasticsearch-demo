@@ -19,6 +19,14 @@
 /_nodes
 ```
 
+### _cluster
+
+```
+/_cluster/health
+/_cluster/health?level=shards
+```
+
+
 ### _settings
 
 ```
@@ -50,3 +58,5 @@
 - [Update Indices Settings](https://www.elastic.co/guide/en/elasticsearch/reference/master/indices-update-settings.html)
 - [Index Templates](https://www.elastic.co/guide/en/elasticsearch/reference/master/indices-templates.html)
 - [Index Aliases](https://www.elastic.co/guide/en/elasticsearch/reference/current/indices-aliases.html)
+- [cat APIs](https://www.elastic.co/guide/en/elasticsearch/reference/current/cat.html)
+- [Cluster APIs](https://www.elastic.co/guide/en/elasticsearch/reference/current/cluster.html)
