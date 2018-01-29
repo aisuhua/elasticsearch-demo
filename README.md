@@ -69,3 +69,8 @@
 - [cat APIs](https://www.elastic.co/guide/en/elasticsearch/reference/current/cat.html)
 - [Cluster APIs](https://www.elastic.co/guide/en/elasticsearch/reference/current/cluster.html)
 - [Tune for indexing speed](https://www.elastic.co/guide/en/elasticsearch/reference/6.1/tune-for-indexing-speed.html)
+
+## Books
+
+- [Elasticsearch: 权威指南](https://www.elastic.co/guide/cn/elasticsearch/guide/current/index.html)
+- [Elasticsearch 5.4 中文文档](http://cwiki.apachecn.org/display/Elasticsearch/Index)
