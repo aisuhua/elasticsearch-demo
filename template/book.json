@@ -1,5 +1,5 @@
 {
-  "114la_book": {
+  "book": {
     "settings": {
       "index": {
         "number_of_shards": "5",
